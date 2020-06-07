@@ -1,14 +1,4 @@
 pipeline{
-   agent any
-   
-   stage('getscm'){
-      echo "Hello..."
-   }
-   stage('Build') {      
-      MAVEN_HOME: 'mvn clean package'
-   }
-   
-   stage('Deploy'){
-       deploy adapters: [tomcat8(credentialsId: 'f1199acd-ddf8-40a1-b722-22ef149aba80', path: '', url: 'http://localhost:7090/')], contextPath: '/devops-4.0.0-SNAPSHOT/', war: '**/*.war'
-   }   
+   agent any   
+   checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '9c0d03eb-47b0-4f7b-aa24-40dcd93d7c6e', url: 'https://github.com/satyacicd/fisapi-demo.git']]]) 
 }
