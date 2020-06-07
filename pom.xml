@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>devops</artifactId>
-	<version>2.0.0-SNAPSHOT</version>
+	<artifactId>fis-devops</artifactId>
+	<version>2.2.2-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>devops</name>
+	<name>fis-devops</name>
 	<description>DevOps Demo Project for D1</description>
 
 	<parent>
@@ -39,9 +39,9 @@
 	</distributionManagement>
 
 	<scm>
-		<connection>scm:git:git@github.com:satyacicd/devops.git</connection>
-		<developerConnection>scm:git:git@github.com:satyacicd/devops.git</developerConnection>
-		<url>git@github.com:satyacicd/devops.git</url>
+		<connection>scm:git:git@github.com:satyacicd/fisapi-demo.git</connection>
+		<developerConnection>scm:git:git@github.com:satyacicd/fisapi-demo.git</developerConnection>
+		<url>git@github.com:satyacicd/fisapi-demo.git</url>
 		<tag>HEAD</tag>
 	</scm>
 
