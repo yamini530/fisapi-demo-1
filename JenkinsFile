@@ -1,11 +1,11 @@
 pipeline{
    agent any
-   def mvnHome
+   
    stage('getscm'){
       echo "Hello..."
    }
    stage('Build') {      
-      mvnHome: 'mvn clean package'
+      MAVEN_HOME: 'mvn clean package'
    }
    
    stage('Deploy'){
