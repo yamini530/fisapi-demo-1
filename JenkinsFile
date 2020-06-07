@@ -7,11 +7,13 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '9c0d03eb-47b0-4f7b-aa24-40dcd93d7c6e', url: 'https://github.com/satyacicd/fisapi-demo.git']]])
             }
         }
-        stage("Build") {
-            steps {
-                'mvn clean package'
-            }
-        }
+        stage('Build') {
+          if (isUnix()) {
+            sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
+          } else {
+              bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
+          }
+       }
 
         stage("deploy adapters") {
             steps {
