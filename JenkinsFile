@@ -4,9 +4,8 @@ pipeline{
    stage('getscm'){
       echo "Hello..."
    }
-   stage('Build') {
-       //Run the maven build
-      sh 'mvn clean package'
+   stage('Build') {      
+      mvnHome: 'mvn clean package'
    }
    
    stage('Deploy'){
