@@ -1,0 +1,28 @@
+pipeline{
+   agent any   
+     stage('Prepare') {
+      //git url: 'git@github.com:satyacicd/devops.git', branch: 'master'
+      mvnHome = tool 'maven'
+		}
+	stage('Build') {
+      if (isUnix()) {
+         sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
+      } else {
+         bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
+      }
+   }
+   stage('Integration Test') {
+     if (isUnix()) {
+        sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean verify"
+     } else {
+        bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean verify/)
+     }
+   }
+  stage('Artifacts') {
+      if (isUnix()) {
+         sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean deploy"
+      } else {
+         bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean deploy/)
+      }
+   }  
+}
