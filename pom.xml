@@ -27,13 +27,13 @@
 
 	<distributionManagement>
 		<repository>
-			<id>central</id>
-			<name>vlmaz2021tn224-releases</name>
+			<id>release</id>
+			<name>releases</name>
 			<url>http://10.7.142.127:8081/artifactory/libs-release-demo</url>
 		</repository>
 		<snapshotRepository>
 			<id>snapshots</id>
-			<name>vlmaz2021tn224-snapshots</name>
+			<name>snapshots</name>
 			<url>http://10.7.142.127:8081/artifactory/libs-snapshot-demo</url>
 		</snapshotRepository>
 	</distributionManagement>
