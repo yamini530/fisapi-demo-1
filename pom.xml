@@ -4,7 +4,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>fis-devops</artifactId>
-	<version>4.4.4-SNAPSHOT</version>
+	<version>1.1.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<name>fis-devops</name>
@@ -28,13 +28,13 @@
 	<distributionManagement>
 		<repository>
 			<id>central</id>
-			<name>libs-release</name>
-			<url>http://10.7.157.204:8081/artifactory/libs-release-demo</url>
+			<name>vlmaz2021tn224-releases</name>
+			<url>http://10.7.142.127:8081/artifactory/libs-release-demo</url>
 		</repository>
 		<snapshotRepository>
-			<id>snapshot</id>
-			<name>libs-snapshot</name>
-			<url>http://10.7.157.204:8081/artifactory/libs-snapshot-demo</url>
+			<id>snapshots</id>
+			<name>vlmaz2021tn224-snapshots</name>
+			<url>http://10.7.142.127:8081/artifactory/libs-snapshot-demo</url>
 		</snapshotRepository>
 	</distributionManagement>
 
