@@ -28,13 +28,13 @@
 	<distributionManagement>
 		<repository>
 		  <id>release</id>
-		  <name>libs-release-demo</name>
-		  <url>http://10.7.142.127:8082/artifactory/libs-release-demo</url>
+		  <name>demo-libs-release</name>
+		  <url>http://10.7.142.127:8082/artifactory/demo-libs-release/</url>
 		</repository>
 		<snapshotRepository>
 		  <id>snapshots</id>
-		  <name>libs-snapshot-demo</name>
-		  <url>http://10.7.142.127:8082/artifactory/libs-snapshot-demo</url>
+		  <name>demo-libs-snapshot</name>
+		  <url>http://10.7.142.127:8082/artifactory/demo-libs-snapshot/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
