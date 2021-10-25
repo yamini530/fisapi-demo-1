@@ -26,11 +26,11 @@
 	</properties>
 
 	<distributionManagement>
-		<repository>
+		<releaseRepository>
 		  <id>release</id>
 		  <name>demo-libs-release</name>
 		  <url>http://10.7.142.127:8082/artifactory/demo-libs-release/</url>
-		</repository>
+		</releaseRepository>
 		<snapshotRepository>
 		  <id>snapshots</id>
 		  <name>demo-libs-snapshot</name>
