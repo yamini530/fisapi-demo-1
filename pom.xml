@@ -25,18 +25,13 @@
 		<jacoco.version>0.7.9</jacoco.version>
 	</properties>
 
-	<distributionManagement>
-		<repository>
-		  <id>release</id>
-		  <name>demo-libs-release</name>
-		  <url>http://10.7.142.127:8082/artifactory/demo-libs-release/</url>
-		</repository>
-		<snapshotRepository>
-		  <id>snapshots</id>
-		  <name>demo-libs-snapshot</name>
-		  <url>http://10.7.142.127:8082/artifactory/demo-libs-snapshot/</url>
-		</snapshotRepository>
-	</distributionManagement>
+<distributionManagement>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>vlmaz2021tn252-snapshots</name>
+        <url>http://10.7.143.73:8081/artifactory/fis-demo</url>
+    </snapshotRepository>
+</distributionManagement>
 
 	<scm>
 		<connection>scm:git:git@github.com:satyacicd/fisapi-demo.git</connection>
